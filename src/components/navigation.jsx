@@ -13,6 +13,7 @@ function NavBar() {
         <ul className="navlinkcontainer300">
           <li>
             <NavLink to="/space-traveler" className="navlink300">Rockets</NavLink>
+            <NavLink to="/dragons" className="navlink300">Dragons</NavLink>
           </li>
         </ul>
       </div>
