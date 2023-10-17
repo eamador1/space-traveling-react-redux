@@ -1,7 +1,7 @@
-function missions() {
+function Missions() {
   return (
     <div>Missions page under construction</div>
   );
 }
 
-export default missions;
+export default Missions;
