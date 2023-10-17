@@ -14,6 +14,7 @@ function NavBar() {
           <li>
             <NavLink to="/space-traveler" className="navlink300">Rockets</NavLink>
             <NavLink to="/dragons" className="navlink300">Dragons</NavLink>
+            <NavLink to="/missions" className="navlink300">Missions</NavLink>
             <NavLink to="/myprofile" className="navlink300">My Profile</NavLink>
           </li>
         </ul>
