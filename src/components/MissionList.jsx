@@ -1,9 +1,8 @@
+/* eslint-disable react/jsx-no-undef */
 /* eslint-disable react/no-unused-prop-types */
 /* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import PropTypes from 'prop-types';
-import Table from 'react-bootstrap/Table';
-import '../styles/MissionList.css';
 
 const MissionList = () => (
   <div className="mission-list">
