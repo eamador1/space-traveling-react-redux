@@ -1,4 +1,7 @@
+/* eslint-disable react/no-unused-prop-types */
+/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
+import PropTypes from 'prop-types';
 import Table from 'react-bootstrap/Table';
 import '../styles/MissionList.css';
 
@@ -15,5 +18,16 @@ const MissionList = () => (
     </Table>
   </div>
 );
+
+MissionList.propTypes = {
+  missions: PropTypes.arrayOf(
+    PropTypes.shape({
+      mission_id: PropTypes.string.isRequired,
+      mission_name: PropTypes.string.isRequired,
+      description: PropTypes.string,
+      reserved: PropTypes.bool,
+    }),
+  ).isRequired,
+};
 
 export default MissionList;
