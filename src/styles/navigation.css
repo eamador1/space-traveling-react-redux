@@ -2,3 +2,13 @@
   width: 64px;
   height: 64px;
 }
+
+.navlink300 {
+  text-decoration: none;
+  color: #000;
+}
+
+.navlink300.active {
+  text-decoration: underline;
+  color: #007bff;
+}
