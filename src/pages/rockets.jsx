@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
+import {
+  Container, Row, Col, Card, Button,
+} from 'react-bootstrap';
 import { fetchRockets, cancelReserveRocket, setSelectedRocket } from '../redux/rockets/rocketsSlice';
 
 const Rocket = ({ rocket }) => {
@@ -12,42 +15,51 @@ const Rocket = ({ rocket }) => {
     dispatch(setSelectedRocket(rocket));
   };
   return (
-    <div className="rocket-card">
-      <div className="card-container">
-        <div className="row">
-          <div className="col-md-4">
-            <img
+    <Card className="rocket-card" style={{ border: 'none' }}>
+      <Container className="card-container">
+        <Row className="row">
+          <Col md={4} style={{ marginBottom: '2%' }}>
+            <Card.Img
               className="rocket-image"
+              variant="top"
               src={rocket.flickr_images[0]}
               alt={`Imagen de ${rocket.rocket_name}`}
+              style={{ borderRadius: '0' }}
+              data-testid="rocket-image"
             />
-          </div>
-          <div className="col-md-8">
-            <div className="rocket-content">
-              <h4 className="rocket-title">{rocket.rocket_name}</h4>
-              <p>
+          </Col>
+          <Col md={8}>
+            <Card.Body className="rocket-content">
+              <Card.Title className="rocket-title">{rocket.rocket_name}</Card.Title>
+              <Card.Text>
                 {rocket.description}
-              </p>
+              </Card.Text>
               {rocket.reserved ? (
-                <button
-                  type="submit"
+                <Button
+                  variant="primary"
+                  style={{
+                    background: 'white',
+                    color: 'gray',
+                    border: '1px solid gray',
+                  }}
                   onClick={handleCancelReserveRocket}
                 >
                   Cancel Reservation
-                </button>
+                </Button>
               ) : (
-                <button
-                  type="submit"
+                <Button
+                  variant="primary"
                   onClick={handleReserveRocket}
+                  data-testid="reserve-button"
                 >
                   Reserve Rocket
-                </button>
+                </Button>
               )}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+            </Card.Body>
+          </Col>
+        </Row>
+      </Container>
+    </Card>
   );
 };
 
