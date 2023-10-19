@@ -22,15 +22,11 @@ export const rocketsSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder.addCase(fetchRockets.fulfilled, (state, action) => action.payload);
-    builder.addCase(setSelectedRocket.fulfilled, (state, action) => {
-      const selectedRocketId = action.payload.rocket_id;
-      return state.map((rocket) => (rocket.rocket_id === selectedRocketId
-        ? { ...rocket, reserved: true } : rocket));
+    builder.addCase(setSelectedRocket.fulfilled, () => {
+
     });
-    builder.addCase(cancelReserveRocket.fulfilled, (state, action) => {
-      const rocketId = action.payload;
-      return state.map((rocket) => (rocket.rocket_id === rocketId
-        ? { ...rocket, reserved: false } : rocket));
+    builder.addCase(cancelReserveRocket.fulfilled, () => {
+
     });
   },
 });
