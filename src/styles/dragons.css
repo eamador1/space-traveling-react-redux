@@ -21,10 +21,11 @@
   
   .reserveDragon {
     border: none;
-    background-color: rgb(47, 100, 205);
+    background-color: #027bff;
     color: #fff;
     border-radius: 6px;
     height: 2.3rem;
     width: 9rem;
+    cursor: pointer;
   }
   
