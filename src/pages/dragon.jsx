@@ -1,18 +1,26 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-import { fetchDragons } from '../redux/dragons/dragonsSlice';
+import { fetchDragons, setSelectedDragon } from '../redux/dragons/dragonsSlice';
 import '../styles/dragons.css';
 
-const ListDragon = ({ dragon }) => (
-  <div className="dragonContainer">
-    <img className="dragonImages" src={dragon.flickr_images[0]} alt={`${dragon.name}`} />
-    <div className="descriptionContainer">
-      <h5>{dragon.name}</h5>
-      <p>{dragon.description}</p>
-    </div>
-  </div>
-);
+const ListDragon = ({ dragon }) => {
+  const dispatch = useDispatch();
+  const handleReserveDragon = () => {
+    dispatch(setSelectedDragon(dragon));
+  };
+
+  return (
+    <section className="dragonContainer">
+      <img className="dragonImages" src={dragon.flickr_images[0]} alt={`${dragon.name}`} />
+      <div className="descriptionContainer">
+        <h5>{dragon.name}</h5>
+        <p>{dragon.description}</p>
+        <button className="reserveDragon" type="button" onClick={handleReserveDragon}>Reserve Dragon</button>
+      </div>
+    </section>
+  );
+};
 
 function Dragons() {
   const dragons = useSelector((store) => store.dragons);
