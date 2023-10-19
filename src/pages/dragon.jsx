@@ -22,11 +22,9 @@ ListDragon.propTypes = {
 
 function Dragons() {
   const dragons = useSelector((store) => store.dragons);
-  console.log('Dragons component - dragons:', dragons);
 
   const dispatch = useDispatch();
   useEffect(() => {
-    console.log('Dragons component - useEffect triggered');
     if (dragons.length === 0) {
       dispatch(fetchDragons());
     }
