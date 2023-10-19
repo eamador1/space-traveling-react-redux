@@ -47,6 +47,7 @@ ListDragon.propTypes = {
     name: PropTypes.string.isRequired,
     flickr_images: PropTypes.arrayOf(PropTypes.string).isRequired,
     description: PropTypes.string.isRequired,
+    reserved: PropTypes.bool.isRequired,
   }).isRequired,
 };
 
