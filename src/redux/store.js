@@ -1,9 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
 import missionsReducer from './missions/missionsSlice';
-import dragonsReducer from './dragons/dragonsSlice';
 
-const rootReducer = {
-  dragons: dragonsReducer,
   missions: missionsReducer,
 };
 
