@@ -1,31 +1,30 @@
 .dragonContainer {
-    display: flex;
-    width: 85vw;
-    margin-left: 5vw;
-    margin-top: 5vh;
-  }
-  
-  .dragonContainer:first-child {
-    margin-top: 0;
-  }
-  
-  .dragonImages {
-    width: 20rem;
-    height: 20rem;
-  }
-  
-  .descriptionContainer {
-    margin-left: 2vw;
-    margin-top: 2vh;
-  }
-  
-  .reserveDragon {
-    border: none;
-    background-color: #027bff;
-    color: #fff;
-    border-radius: 6px;
-    height: 2.3rem;
-    width: 9rem;
-    cursor: pointer;
-  }
-  
+  display: flex;
+  width: 85vw;
+  margin-left: 5vw;
+  margin-top: 5vh;
+}
+
+.dragonContainer:first-child {
+  margin-top: 0;
+}
+
+.dragonImages {
+  width: 20rem;
+  height: 20rem;
+}
+
+.descriptionContainer {
+  margin-left: 2vw;
+  margin-top: 2vh;
+}
+
+.reserveDragon {
+  border: none;
+  background-color: #027bff;
+  color: #fff;
+  border-radius: 6px;
+  height: 2.3rem;
+  width: 9rem;
+  cursor: pointer;
+}
