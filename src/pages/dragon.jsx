@@ -2,23 +2,17 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import { fetchDragons } from '../redux/dragons/dragonsSlice';
+import '../styles/dragons.css';
 
 const ListDragon = ({ dragon }) => (
-  <div>
-    <span>{dragon.id}</span>
-    <img src={dragon.flickr_images[0]} alt={`${dragon.name}`} />
-    <span>{dragon.name}</span>
-    <span>{dragon.type}</span>
+  <div className="dragonContainer">
+    <img className="dragonImages" src={dragon.flickr_images[0]} alt={`${dragon.name}`} />
+    <div className="descriptionContainer">
+      <h5>{dragon.name}</h5>
+      <p>{dragon.description}</p>
+    </div>
   </div>
 );
-ListDragon.propTypes = {
-  dragon: PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    flickr_images: PropTypes.arrayOf(PropTypes.string).isRequired,
-    type: PropTypes.string.isRequired,
-  }).isRequired,
-};
 
 function Dragons() {
   const dragons = useSelector((store) => store.dragons);
@@ -38,6 +32,15 @@ function Dragons() {
     </div>
   );
 }
+
+ListDragon.propTypes = {
+  dragon: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    flickr_images: PropTypes.arrayOf(PropTypes.string).isRequired,
+    description: PropTypes.string.isRequired,
+  }).isRequired,
+};
 
 export { ListDragon };
 export default Dragons;
