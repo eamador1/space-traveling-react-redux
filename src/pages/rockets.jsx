@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import {
   Container, Row, Col, Card, Button,
 } from 'react-bootstrap';
+import Badge from 'react-bootstrap/Badge';
 import { fetchRockets, cancelReserveRocket, setSelectedRocket } from '../redux/rockets/rocketsSlice';
 
 const Rocket = ({ rocket }) => {
@@ -32,6 +33,7 @@ const Rocket = ({ rocket }) => {
             <Card.Body className="rocket-content">
               <Card.Title className="rocket-title">{rocket.rocket_name}</Card.Title>
               <Card.Text>
+                {rocket.reserved && <Badge bg="primary">Reserved</Badge>}
                 {rocket.description}
               </Card.Text>
               {rocket.reserved ? (
