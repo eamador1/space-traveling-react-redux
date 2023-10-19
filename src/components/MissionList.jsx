@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
+
 import { useDispatch } from 'react-redux';
 import { reserveMission, leaveMission } from '../redux/missions/missionsSlice';
 import '../styles/MissionList.css';
@@ -16,7 +17,6 @@ const MissionList = ({ missions }) => {
   const handleLeaveMission = (missionId) => {
     dispatch(leaveMission(missionId));
   };
-
   return (
     <div className="mission-list">
       <Table striped bordered hover>
@@ -40,9 +40,10 @@ const MissionList = ({ missions }) => {
                 <td className="mission-description">{description}</td>
                 <td>
                   {reserved ? (
-                    <Button type="submit" variant="outline-secondary" className="join-button" onClick={() => handleLeaveMission(missionId)}>Leave Mission</Button>
-                  ) : (
                     <Button type="submit" variant="outline-secondary" className="join-button" onClick={() => handleJoinMission(missionId)}>Join Mission</Button>
+
+                  ) : (
+                    <Button type="submit" variant="outline-secondary" className="join-button" onClick={() => handleLeaveMission(missionId)}>Leave Mission</Button>
                   )}
                 </td>
               </tr>
