@@ -5,8 +5,8 @@ import dragonsReducer from './dragons/dragonsSlice';
 
 const rootReducer = {
   rockets: rocketsReducer,
-  dragons: dragonsReducer,
   missions: missionsReducer,
+  dragons: dragonsReducer,
 };
 
 const store = configureStore({
