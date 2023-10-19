@@ -8,7 +8,7 @@ export const fetchDragons = createAsyncThunk('dragons/fetchDragons', async () =>
   return response.data.map((dragon) => ({
     id: dragon.id,
     name: dragon.name,
-    type: dragon.type,
+    description: dragon.description,
     flickr_images: dragon.flickr_images,
   }));
 });
