@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
-
+import Badge from 'react-bootstrap/Badge';
 import { useDispatch } from 'react-redux';
 import { reserveMission, leaveMission } from '../redux/missions/missionsSlice';
 import '../styles/MissionList.css';
@@ -40,10 +40,16 @@ const MissionList = ({ missions }) => {
                 <td className="mission-description">{description}</td>
                 <td>
                   {reserved ? (
-                    <Button type="submit" variant="outline-secondary" className="join-button" onClick={() => handleJoinMission(missionId)}>Join Mission</Button>
-
+                    <Badge bg="primary" className="mission-status">ACTIVE MEMBER</Badge>
                   ) : (
+                    <Badge bg="secondary" className="mission-status">NOT A MEMBER</Badge>
+                  )}
+                </td>
+                <td>
+                  {reserved ? (
                     <Button type="submit" variant="outline-secondary" className="join-button" onClick={() => handleLeaveMission(missionId)}>Leave Mission</Button>
+                  ) : (
+                    <Button type="submit" variant="outline-secondary" className="join-button" onClick={() => handleJoinMission(missionId)}>Join Mission</Button>
                   )}
                 </td>
               </tr>
