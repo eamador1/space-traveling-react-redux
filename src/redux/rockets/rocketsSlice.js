@@ -28,8 +28,10 @@ export const rocketsSlice = createSlice({
       return state.map((rocket) => (rocket.rocket_id === selectedRocketId
         ? { ...rocket, reserved: true } : rocket));
     });
-    builder.addCase(cancelReserveRocket.fulfilled, () => {
-
+    builder.addCase(cancelReserveRocket.fulfilled, (state, action) => {
+      const rocketId = action.payload;
+      return state.map((rocket) => (rocket.rocket_id === rocketId
+        ? { ...rocket, reserved: false } : rocket));
     });
   },
 });
