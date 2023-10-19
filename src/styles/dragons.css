@@ -1,20 +1,20 @@
 .dragonContainer {
-    display: flex;
-    width: 85vw;
-    margin-left: 5vw;
-    margin-top: 5vh;
-  }
+  display: flex;
+  width: 85vw;
+  margin-left: 5vw;
+  margin-top: 5vh;
+}
 
-  .dragonContainer:first-child {
-    margin-top: 0;
-  }
-  
-  .dragonImages {
-    width: 20rem;
-    height: 20rem;
-  }
-  
-  .descriptionContainer {
-    margin-left: 2vw;
-    margin-top: 2vh;
-  }
+.dragonContainer:first-child {
+  margin-top: 0;
+}
+
+.dragonImages {
+  width: 20rem;
+  height: 20rem;
+}
+
+.descriptionContainer {
+  margin-left: 2vw;
+  margin-top: 2vh;
+}
