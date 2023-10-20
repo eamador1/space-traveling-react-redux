@@ -1,12 +1,94 @@
-# Getting Started with Create React App
+<a name="readme-top"></a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<!-- TABLE OF CONTENTS -->
 
-## Available Scripts
+# 📗 Table of Contents
 
-In the project directory, you can run:
+- [📗 Table of Contents](#-table-of-contents)
+- [📖 space-traveling-react-redux Project ](#-space-traveling-react-redux-)
+  - [🛠 Built With ](#-built-with-)
+    - [Tech Stack ](#tech-stack-)
+    - [Key Features ](#key-features-)
+- [💻 Getting Started ](#-getting-started-)
+- [📖 Install](#-install)
+- [📖 Usage](#-usage)
+- [Run tests](#run-tests)
+    - [👥 Author ](#-author-)
+  - [🔭 Future Features ](#-future-features-)
+  - [🤝 Contributing ](#-contributing-)
+  - [⭐️ Show your support ](#️-show-your-support-)
+  - [🙏 Acknowledgments ](#-acknowledgments-)
+  - [📝 License ](#-license-)
 
-### `npm start`
+<!-- PROJECT DESCRIPTION -->
+<br>
+
+# 📖 space-traveling-react-redux <a name="space-traveling-react-redux"></a>
+
+The space-traveling-react-redux is a web application that allows users to book space travels and join missions. They'll have also a profile page.
+<br>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🛠 Built With <a name="built-with"></a>
+
+### Tech Stack <a name="tech-stack"></a>
+
+<details>
+  <summary>Repository Hosting Service</summary>
+  <ul>
+    <li><a href="https://github.com/">GitHub</a></li>
+  </ul>
+</details>
+
+<details>
+  <summary>Stacks</summary>
+  <ul>
+    <li><a href="https://react.dev/">React</a></li>
+    <li><a href="https://redux.js.org/">Redux</a></li>
+ </ul>
+</details>
+
+<!-- Features -->
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Key Features <a name="key-features"></a>
+
+- *Join a mission:* Users will be able to see current missions and decide if they want to join or leave them.
+- *Book a rocket:* Users can book rockets by clicking a button
+- *User's profile page:* Users have the profile page where they can see their rockets and missions.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+# 💻 Getting Started <a name="getting-started"></a>
+
+Clone this repository to your desired folder:
+
+Example commands:
+
+bash
+  git clone https://github.com/eamador1/space-traveling-react-redux.git
+
+
+<br>
+
+# 📖 Install
+
+Install this project's dependencies with:
+
+
+cd .\space-traveling-react-redux.git
+npm install
+
+
+<br>
+
+# 📖 Usage
+
+To run the project, execute the following command:
+
+bash
+ npm run preview
+
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
@@ -14,57 +96,79 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
+<br>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Run tests
 
-### `npm run build`
+bash
+  npm run test
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<br>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### `npm run eject`
+<!-- AUTHORS -->
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 👥 Author <a name="authors"></a>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+👤 *Erwin Amador*
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+-   GitHub: [Erwin Amador](https://github.com/eamador1)
+-   X: [Erwin Amador](https://twitter.com/hokieamador)
+-   LinkedIn:[Erwin Amador](https://www.linkedin.com/in/hokieamador/)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+👤 *Ivonne Benites*
 
-## Learn More
+- GitHub: [Ivonne Benites](https://github.com/IvonneBenitesRodriguez)
+- X: [Ivonne Benites](https://twitter.com/IvonneBenitesR)
+- LinkedIn: [Ivonne Benites](https://www.linkedin.com/in/ivonnebenites/)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+👤 *Gilbert Happi Dushimimana*
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Github: [Gilbert Happi Dushimimana](https://github.com/gilberthappi)
+- X: [Gilbert Happi Dushimimana](https://twitter.com/DushimimanaGil3)
+- LinkedIn: [Gilber Happi Dushimimana](https://www.linkedin.com/in/dushimimana-gilbert-happi-997b2a262/)
 
-### Code Splitting
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<!-- FUTURE FEATURES -->
 
-### Analyzing the Bundle Size
+## 🔭 Future Features <a name="future-features"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- [ ] *New content*
+- [ ] *Testimonial section*
 
-### Making a Progressive Web App
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<!-- CONTRIBUTING -->
 
-### Advanced Configuration
+## 🤝 Contributing <a name="contributing"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Contributions, issues, and feature requests are welcome!
 
-### Deployment
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+<!-- SUPPORT -->
 
-### `npm run build` fails to minify
+## ⭐️ Show your support <a name="support"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+If you like this project gift us with a star, follow on [GitHub](https://github.com/eamador1/) and a nice comment!
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+I would like to appreciate <a href="https://www.microverse.org/">Microverse</a> for providing the resources and the platform for us to be a Professional full-stack developer.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./LICENSE) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
