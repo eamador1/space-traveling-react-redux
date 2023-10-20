@@ -5,7 +5,7 @@ import Badge from 'react-bootstrap/Badge';
 import { fetchDragons, setSelectedDragon, cancelReserveDragon } from '../redux/dragons/dragonsSlice';
 import '../styles/dragons.css';
 
-const ListDragon = ({ dragon }) => {
+export const ListDragon = ({ dragon }) => {
   const dispatch = useDispatch();
 
   const handleReserveDragon = () => {
@@ -17,7 +17,7 @@ const ListDragon = ({ dragon }) => {
 
   return (
     <section className="dragonContainer">
-      <img className="dragonImages" src={dragon.flickr_images[0]} alt={`${dragon.name}`} />
+      <img className="dragonImages" src={dragon.flickr_images[0]} alt={`${dragon.name}`} data-testid="dragonImage" />
       <div className="descriptionContainer">
         <h5>{dragon.name}</h5>
         <p>
@@ -29,7 +29,12 @@ const ListDragon = ({ dragon }) => {
             Cancel Reservation
           </button>
         ) : (
-          <button className="reserveDragon" type="button" onClick={handleReserveDragon}>
+          <button
+            className="reserveDragon"
+            type="button"
+            onClick={handleReserveDragon}
+            data-testid="reserve-button"
+          >
             Reserve Dragon
           </button>
         )}
@@ -67,5 +72,5 @@ ListDragon.propTypes = {
   }).isRequired,
 };
 
-export { ListDragon };
 export default Dragons;
+
