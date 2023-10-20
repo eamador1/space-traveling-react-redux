@@ -1,13 +1,17 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-import { fetchDragons, setSelectedDragon } from '../redux/dragons/dragonsSlice';
+import { fetchDragons, setSelectedDragon, cancelReserveDragon } from '../redux/dragons/dragonsSlice';
 import '../styles/dragons.css';
 
 const ListDragon = ({ dragon }) => {
   const dispatch = useDispatch();
+
   const handleReserveDragon = () => {
     dispatch(setSelectedDragon(dragon));
+  };
+  const handleCancelReserveDragon = () => {
+    dispatch(cancelReserveDragon(dragon.id));
   };
 
   return (
@@ -16,7 +20,15 @@ const ListDragon = ({ dragon }) => {
       <div className="descriptionContainer">
         <h5>{dragon.name}</h5>
         <p>{dragon.description}</p>
-        <button className="reserveDragon" type="button" onClick={handleReserveDragon}>Reserve Dragon</button>
+        {dragon.reserved ? (
+          <button className="cancelReserveDragon" type="button" onClick={handleCancelReserveDragon}>
+            Cancel Reservation
+          </button>
+        ) : (
+          <button className="reserveDragon" type="button" onClick={handleReserveDragon}>
+            Reserve Dragon
+          </button>
+        )}
       </div>
     </section>
   );
