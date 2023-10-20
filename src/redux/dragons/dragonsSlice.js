@@ -15,6 +15,7 @@ export const fetchDragons = createAsyncThunk('dragons/fetchDragons', async () =>
 });
 
 export const setSelectedDragon = createAsyncThunk('dragons/setSelectedDragon', async (dragonData) => dragonData);
+export const cancelReserveDragon = createAsyncThunk('dragons/cancelReserveDragon', async (dragonId) => dragonId);
 const initialState = [];
 
 export const dragonsSlice = createSlice({
@@ -25,10 +26,15 @@ export const dragonsSlice = createSlice({
     builder
       .addCase(fetchDragons.fulfilled, (state, action) => action.payload);
     builder.addCase(setSelectedDragon.fulfilled, (state, action) => {
-      const selectedDragonId = action.payload.dragon_id;
+      const selectedDragonId = action.payload.id;
       return state
-        .map((dragon) => (dragon.dragon_id === selectedDragonId
+        .map((dragon) => (dragon.id === selectedDragonId
           ? { ...dragon, reserved: true } : dragon));
+    });
+    builder.addCase(cancelReserveDragon.fulfilled, (state, action) => {
+      const dragonId = action.payload;
+      return state.map((dragon) => (dragon.id === dragonId
+        ? { ...dragon, reserved: false } : dragon));
     });
   },
 });
