@@ -5,8 +5,10 @@ import Table from 'react-bootstrap/Table';
 const MyProfile = () => {
   const missions = useSelector((state) => state.missions.missions);
   const rockets = useSelector((state) => state.rockets);
+  const dragons = useSelector((state) => state.dragons);
   const joinedMissions = missions.filter((mission) => mission.reserved);
   const reservedRockets = rockets.filter((rocket) => rocket.reserved);
+  const reservedDragons = dragons.filter((dragon) => dragon.reserved);
   return (
     <div
       style={{
@@ -33,7 +35,7 @@ const MyProfile = () => {
           </tbody>
         </Table>
       </div>
-      <div style={{ width: '30%', marginLeft: '5%', marginTop: '20px' }}>
+      <div style={{ width: '30%', marginTop: '20px' }}>
         <Table striped bordered hover>
           <thead>
             <tr>
@@ -44,6 +46,22 @@ const MyProfile = () => {
             {reservedRockets.map((rocket) => (
               <tr key={rocket.rocket_id}>
                 <td>{rocket.rocket_name}</td>
+              </tr>
+            ))}
+          </tbody>
+        </Table>
+      </div>
+      <div style={{ width: '30%', marginTop: '20px' }}>
+        <Table striped bordered hover>
+          <thead>
+            <tr>
+              <th>My Dragons</th>
+            </tr>
+          </thead>
+          <tbody>
+            {reservedDragons.map((dragon) => (
+              <tr key={dragon.id}>
+                <td>{dragon.name}</td>
               </tr>
             ))}
           </tbody>
