@@ -17,6 +17,7 @@ const MissionList = ({ missions }) => {
   const handleLeaveMission = (missionId) => {
     dispatch(leaveMission(missionId));
   };
+
   return (
     <div className="mission-list">
       <Table striped bordered hover>

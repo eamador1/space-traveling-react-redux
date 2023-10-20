@@ -27,7 +27,6 @@ describe('MissionList', () => {
         <MissionList missions={mockMissions} />
       </Provider>,
     );
-
     mockMissions.forEach((mission) => {
       expect(screen.getByText(mission.mission_name)).toBeInTheDocument();
       expect(screen.getByText(mission.description)).toBeInTheDocument();
