@@ -169,6 +169,6 @@ I would like to appreciate <a href="https://www.microverse.org/">Microverse</a> 
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT]licensed.
+This project is [MIT](./LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
