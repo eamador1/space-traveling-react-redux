@@ -38,3 +38,7 @@
   width: 10rem;
   cursor: pointer;
 }
+
+.badge {
+  height: 1.5rem;
+}

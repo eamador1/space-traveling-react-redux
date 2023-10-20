@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
+import Badge from 'react-bootstrap/Badge';
 import { fetchDragons, setSelectedDragon, cancelReserveDragon } from '../redux/dragons/dragonsSlice';
 import '../styles/dragons.css';
 
@@ -19,7 +20,10 @@ const ListDragon = ({ dragon }) => {
       <img className="dragonImages" src={dragon.flickr_images[0]} alt={`${dragon.name}`} />
       <div className="descriptionContainer">
         <h5>{dragon.name}</h5>
-        <p>{dragon.description}</p>
+        <p>
+          {dragon.reserved && <Badge className="badge" bg="primary">Reserved</Badge>}
+          {dragon.description}
+        </p>
         {dragon.reserved ? (
           <button className="cancelReserveDragon" type="button" onClick={handleCancelReserveDragon}>
             Cancel Reservation
