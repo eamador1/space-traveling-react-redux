@@ -28,3 +28,13 @@
   width: 9rem;
   cursor: pointer;
 }
+
+.cancelReserveDragon {
+  border: 1px solid gray;
+  background-color: #ffff;
+  color: gray;
+  border-radius: 6px;
+  height: 2.3rem;
+  width: 10rem;
+  cursor: pointer;
+}
