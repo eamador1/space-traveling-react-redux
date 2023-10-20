@@ -17,7 +17,7 @@ const mockDragon = {
 const store = configureStore({ reducer: { dragons: dragonsReducer } });
 
 describe('<Dragons /> component', () => {
-  /*it('displays dragon details', () => {
+  /* it('displays dragon details', () => {
     render(
       <Provider store={store}>
         <ListDragon dragon={mockDragon} />
@@ -27,11 +27,11 @@ describe('<Dragons /> component', () => {
     expect(screen.getByText(mockDragon.name)).toBeInTheDocument();
     expect(screen.getByAltText(mockDragon.name)).toBeInTheDocument();
     expect(screen.getByTestId('dragonImage')).toHaveAttribute('src', mockDragon.flickr_images[0]);
-  });*/
+  }); */
 
   it('handles reservation button click', () => {
     render(
-      <Provider store={store}>  
+      <Provider store={store}>
         <ListDragon dragon={mockDragon} />
       </Provider>,
     );

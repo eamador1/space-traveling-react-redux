@@ -73,4 +73,3 @@ ListDragon.propTypes = {
 };
 
 export default Dragons;
-
