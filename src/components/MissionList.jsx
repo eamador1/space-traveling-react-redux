@@ -41,7 +41,7 @@ const MissionList = ({ missions }) => {
                 <td className="mission-description">{description}</td>
                 <td>
                   {reserved ? (
-                    <Badge bg="success" className="mission-status">ACTIVE MEMBER</Badge>
+                    <Badge bg="" className={`mission-status ${reserved ? 'teal-badge' : ''}`}>ACTIVE MEMBER</Badge>
                   ) : (
                     <Badge bg="secondary" className="mission-status">NOT A MEMBER</Badge>
                   )}
