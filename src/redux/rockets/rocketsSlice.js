@@ -37,4 +37,3 @@ export const rocketsSlice = createSlice({
 });
 
 export default rocketsSlice.reducer;
-

@@ -5,7 +5,7 @@ import {
   Container, Row, Col, Card, Button,
 } from 'react-bootstrap';
 import Badge from 'react-bootstrap/Badge';
-import { fetchRockets, cancelReserveRocket, setSelectedRocket } from '../redux/rockets/rocketsSlice.js';
+import { fetchRockets, cancelReserveRocket, setSelectedRocket } from '../redux/rockets/rocketsSlice';
 
 const Rocket = ({ rocket }) => {
   const dispatch = useDispatch();
@@ -94,4 +94,3 @@ function Rockets() {
 
 export { Rocket };
 export default Rockets;
-

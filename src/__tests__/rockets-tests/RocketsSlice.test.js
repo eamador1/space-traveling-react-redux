@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { configureStore } from '@reduxjs/toolkit';
-import rocketsReducer, { fetchRockets, setSelectedRocket, cancelReserveRocket } from '../../redux/rockets/rocketsSlice.js';
+import rocketsReducer, { fetchRockets, setSelectedRocket, cancelReserveRocket } from '../../redux/rockets/rocketsSlice';
 
 jest.mock('axios');
 
@@ -44,4 +44,3 @@ describe('rocketsSlice', () => {
     expect(store.getState().rockets[0].reserved).toBe(false);
   });
 });
-
