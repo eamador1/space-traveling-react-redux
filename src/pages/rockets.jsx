@@ -5,7 +5,7 @@ import {
   Container, Row, Col, Card, Button,
 } from 'react-bootstrap';
 import Badge from 'react-bootstrap/Badge';
-import { fetchRockets, cancelReserveRocket, setSelectedRocket } from '../redux/rockets/rocketsSlice';
+import { fetchRockets, cancelReserveRocket, setSelectedRocket } from '../redux/rockets/rocketsSlice.js';
 
 const Rocket = ({ rocket }) => {
   const dispatch = useDispatch();

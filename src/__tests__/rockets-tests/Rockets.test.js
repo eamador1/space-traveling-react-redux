@@ -3,7 +3,7 @@ import '@testing-library/jest-dom/extend-expect';
 import { render, fireEvent, screen } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
-import rocketsReducer from '../../redux/rockets/rocketsSlice';
+import rocketsReducer from '../../redux/rockets/rocketsSlice.js';
 import Rockets, { Rocket } from '../../pages/rockets';
 
 const mockRocket = {
