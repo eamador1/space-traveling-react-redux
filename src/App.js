@@ -11,8 +11,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const App = () => (
   <Router>
     <NavBar />
-    <Routes basename="space_traveler">
-      <Route path="/space-traveler" element={<Rockets />} />
+    <Routes>
+      <Route path="/" element={<Rockets />} />
       <Route path="/myprofile" element={<MyProfile />} />
       <Route path="/dragons" element={<Dragons />} />
       <Route path="/missions" element={<Missions />} />
