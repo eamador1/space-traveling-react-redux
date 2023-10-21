@@ -41,14 +41,14 @@ const MissionList = ({ missions }) => {
                 <td className="mission-description">{description}</td>
                 <td>
                   {reserved ? (
-                    <Badge bg="primary" className="mission-status">ACTIVE MEMBER</Badge>
+                    <Badge bg="success" className="mission-status">ACTIVE MEMBER</Badge>
                   ) : (
                     <Badge bg="secondary" className="mission-status">NOT A MEMBER</Badge>
                   )}
                 </td>
                 <td>
                   {reserved ? (
-                    <Button type="submit" variant="outline-secondary" className="join-button" onClick={() => handleLeaveMission(missionId)}>Leave Mission</Button>
+                    <Button type="submit" variant="outline-danger" className="join-button" onClick={() => handleLeaveMission(missionId)}>Leave Mission</Button>
                   ) : (
                     <Button type="submit" variant="outline-secondary" className="join-button" onClick={() => handleJoinMission(missionId)}>Join Mission</Button>
                   )}
