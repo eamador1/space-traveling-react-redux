@@ -45,7 +45,6 @@ describe('missions reducer', () => {
     const actual = store.getState().missions;
     expect(actual.missions[0].reserved).toBe(true);
   });
-
   test('should handle leaveMission', () => {
     store.dispatch(leaveMission('1'));
     const actual = store.getState().missions;

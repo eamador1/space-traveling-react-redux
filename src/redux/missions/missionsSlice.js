@@ -13,7 +13,6 @@ export const fetchMissions = createAsyncThunk(
     }));
   },
 );
-
 export const missionsSlice = createSlice({
   name: 'missions',
   initialState: { missions: [], loading: false },

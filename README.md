@@ -124,7 +124,7 @@ bash
 - X: [Ivonne Benites](https://twitter.com/IvonneBenitesR)
 - LinkedIn: [Ivonne Benites](https://www.linkedin.com/in/ivonnebenites/)
 
-👤 *Gilbert Happi Dushimimana*
+👤 *Gilbert  Dushimimana Happi*
 
 - Github: [Gilbert Happi Dushimimana](https://github.com/gilberthappi)
 - X: [Gilbert Happi Dushimimana](https://twitter.com/DushimimanaGil3)

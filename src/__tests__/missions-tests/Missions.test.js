@@ -57,7 +57,6 @@ describe('Missions', () => {
     );
     await waitFor(() => expect(axios.get).toHaveBeenCalledTimes(1));
   });
-
   test('renders MissionList component when not loading', async () => {
     render(
       <Provider store={store}>
