@@ -108,7 +108,7 @@ bash
 <br>
 
 # 📖 Deployment
-  https://app.netlify.com/sites/eamador1-space-travel/overview
+  https://eamador1-space-travel.netlify.app/
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
